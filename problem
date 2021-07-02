@@ -12,6 +12,17 @@ DNAStrand ("ATTGC") // return "TAACG"
 DNAStrand ("GTAT") // return "CATA" 
 */
 
-function DNAStrand(dna){
-  //your code here
+const DNAStrand = (dna) => {
+  const opposites = {
+    A: 'T',
+    T: 'A',
+    G: 'C',
+    C: 'G'
+  };
+  let str = '';
+  for(let i = 0; i < dna.length; i++) {
+    str += opposites[dna[i]];
+  }
+  
+  return str;
 }
